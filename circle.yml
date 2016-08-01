@@ -4,10 +4,10 @@ machine:
 dependencies:
   pre:
     - mvn install
+test:
+  override:
+    - mvn -f JStribog/pom.xml  -DskipTests=false clean integration-test
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
 
-deployment:
-  staging:
-    branch: master
-    commands:
-      - mvn -f JStribog/pom.xml  -DskipTests=false clean package
-      
