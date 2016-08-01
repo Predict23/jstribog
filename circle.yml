@@ -1,0 +1,13 @@
+machine:
+  java:
+    version: openjdk7
+dependencies:
+  pre:
+    - mvn install
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - mvn -f JStribog/pom.xml  -DskipTests=false clean package
+      
