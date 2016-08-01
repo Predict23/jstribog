@@ -1,3 +1,5 @@
+Build: [![CircleCI](https://circleci.com/gh/Predict23/jstribog.svg?style=svg)](https://circleci.com/gh/Predict23/jstribog)
+
 The goal of the project is to provide free and open source JCA (Java Cryptography Architecture) compatible implementation of GOST (ГОСТ) R 34.11-2012 cryptography hash function.
 
 If you want to participate in the project, or need a contact with author please create an issue here: https://code.google.com/p/jstribog/issues/list
