@@ -1,9 +1,6 @@
 machine:
   java:
     version: openjdk7
-dependencies:
-  pre:
-    - mvn install
 test:
   override:
     - mvn -f JStribog/pom.xml  -DskipTests=false clean integration-test
