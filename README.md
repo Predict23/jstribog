@@ -2,11 +2,13 @@ The goal of the project is to provide free and open source JCA (Java Cryptograph
 
 If you want to participate in the project, or need a contact with author please create an issue here: https://code.google.com/p/jstribog/issues/list
 
-===Usage===
+## Usage
+
 Use StribogB version for lo0ong inputs. Notice that you need to revers the input data yourself if you use StribogB256 or StribogB512.
 
 Stribog256 and Stribog512 are not so difficult in usage, but OutOfMemoryException can occure, if you'll try to get the digest of the message which bigger (longer), than Java Heap.
-{{{
+
+```java
 package com.mystartup;
 
 import java.security.*;
@@ -57,11 +59,13 @@ public class UsageSample {
     }
 
 }
-}}}
+```
+
 Expected output:
-{{{
+
+```
 00557BE5E584FD52A449B16B0251D05D27F94AB76CBAA6DA890B59D8EF1E159D
 486F64C1917879417FEF082B3381A4E211C324F074654C38823A7B76F830AD00FA1FBAE42B1285C0352F227524BC9AB16254288DD6863DCCD5B9F54A1AD0541B
 00557BE5E584FD52A449B16B0251D05D27F94AB76CBAA6DA890B59D8EF1E159D
 486F64C1917879417FEF082B3381A4E211C324F074654C38823A7B76F830AD00FA1FBAE42B1285C0352F227524BC9AB16254288DD6863DCCD5B9F54A1AD0541B
-}}}
+```
